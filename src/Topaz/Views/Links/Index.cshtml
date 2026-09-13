@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Topaz · Encurtador</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="@Url.Content("~/site.css")">
+</head>
+<body>
+<main>
+    <h1>Encurtador de URLs</h1>
+    <p>Transforme um endereço longo em um link fácil de compartilhar.</p>
+    <form id="shorten-form" action="@Url.Content("~/api/links")">
+        <label for="url">URL original</label>
+        <input id="url" name="url" type="url" placeholder="https://exemplo.com/pagina" required maxlength="2048">
+        <label for="alias">Alias (opcional)</label>
+        <input id="alias" name="alias" maxlength="32" pattern="[a-zA-Z0-9_\-]+" placeholder="meu-link">
+        <small>Até 32 letras sem acentos, números, hífen ou sublinhado.</small>
+        <button id="submit" type="submit">Gerar link</button>
+    </form>
+    <p id="message" role="status" aria-live="polite"></p>
+    <a id="result" hidden></a>
+    <p class="note">Demonstração: os links são apagados quando a aplicação reinicia.</p>
+</main>
+<script src="@Url.Content("~/site.js")" defer></script>
+</body>
+</html>

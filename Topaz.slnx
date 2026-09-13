@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Topaz/Topaz.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Topaz.Tests/Topaz.Tests.csproj" />
+  </Folder>
+</Solution>
